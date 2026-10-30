@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel="stylesheet" href="./css/style.css">
+<meta charset="UTF-8"><link rel="icon" href="./assets/images/asset-c0ff967d4cbd.webp">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#0b0806">
+<meta name="description" content="OroNoche · Casino online peruano. Slots, casino en vivo y arcade en soles. Deposita y retira con Yape, Plin y bancos peruanos. Solo mayores de 18 años.">
+<title>OroNoche · Casino online peruano</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<meta name="description" content="OroNoche — casino online peruano. Consulta las promociones y novedades para nuevos clientes.">
+<meta name="theme-color" content="#090806">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://oronoche.github.io/oronoche/">
+<meta property="og:site_name" content="OroNoche">
+<meta property="og:title" content="OroNoche — Bono de bienvenida de 100 soles">
+<meta property="og:description" content="Descubre OroNoche y consulta la promoción para nuevos clientes.">
+<meta property="og:image" content="https://oronoche.github.io/oronoche/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="OroNoche — promoción para nuevos clientes">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OroNoche — Bono de bienvenida de 100 soles">
+<meta name="twitter:description" content="Descubre OroNoche y consulta la promoción para nuevos clientes.">
+<meta name="twitter:image" content="https://oronoche.github.io/oronoche/preview.jpg">
+</head>
+<body>
+
+
+<div class="site-head">
+<header class="top">
+  <a class="brand" href="#" onclick="current()?showCasino():showOnly('home');return false" aria-label="OroNoche"><img data-logo alt="OroNoche · Casino online peruano"></a>
+  <div class="top-actions" id="guestActions">
+    <button class="btn ghost" type="button" onclick="showAuth('login')"><span class="ico guest-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5"/><path d="M15 12H3"/></svg></span><span>Entrar</span></button>
+    <button class="btn gold" type="button" onclick="showAuth('register')"><span class="ico guest-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 20c1-4 3.5-6 7-6s6 2 7 6"/><path d="M19 8v6M16 11h6"/></svg></span><span>Crear cuenta</span></button>
+  </div>
+  <div class="top-actions hidden" id="userActions">
+    <div class="balance-chip" id="balanceChip" title="Saldo disponible"><span class="bc-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg></span></span><span class="bc-txt"><small>Saldo</small><b id="headerBalance">S/ 100.00</b></span></div>
+    <div class="wallet-group" id="walletGroup">
+      <button class="btn gold" type="button" onclick="openWallet('deposit')"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7.5 10.5L12 15l4.5-4.5"/><path d="M5 19.5h14"/></svg></span><span>Depositar</span></button>
+      <button class="btn btn-green" type="button" onclick="openWallet('withdraw')"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V4"/><path d="M7.5 8.5L12 4l4.5 4.5"/><path d="M5 19.5h14"/></svg></span><span>Retirar</span></button>
+    </div>
+    <span class="top-sep" id="topSep" aria-hidden="true"></span>
+    <div class="acct-group">
+      <button class="btn ghost mail-btn" type="button" id="mailBtn" onclick="openInbox()" aria-label="Cartas" title="Cartas"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7.5L12 13.5l8.5-6"/></svg></span><span class="mail-badge hidden" id="mailBadge">0</span></button>
+      <button class="btn ghost" type="button" id="acctBtn" onclick="goProfile()" aria-label="Mi cuenta" title="Mi cuenta"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span><span class="lbl">Mi cuenta</span></button>
+    </div>
+  </div>
+</header>
+<nav class="pnav" aria-label="Productos">
+  <button type="button" data-k="slots" onclick="goProduct('slots')"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h.01M12 8h.01M17 8h.01M7 12h.01M12 12h.01M17 12h.01M7 16h10"/></svg></span><span>Slots</span></button>
+  <button type="button" data-k="live" onclick="goProduct('live')"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></span><span>Casino en vivo</span></button>
+  <button type="button" data-k="arcade" onclick="goProduct('arcade')"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.2" fill="currentColor" stroke="none"/><circle cx="16" cy="8" r="1.2" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="8" cy="16" r="1.2" fill="currentColor" stroke="none"/><circle cx="16" cy="16" r="1.2" fill="currentColor" stroke="none"/></svg></span><span>Arcade</span></button>
+  <button type="button" data-k="extra" onclick="goProduct('extra')"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4"/><path d="M7 4h10v6a5 5 0 0 1-10 0V4z"/><path d="M17 6h3v2a3 3 0 0 1-3 3M7 6H4v2a3 3 0 0 0 3 3"/></svg></span><span>Deportes y bonos</span></button>
+  <button type="button" data-k="pagos" onclick="goProduct('pagos')"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20M6 15h4"/></svg></span><span>Pagos</span></button>
+  <span class="pn-end"><b class="age18">+18</b>Juega con responsabilidad</span>
+</nav>
+</div>
+
+<main class="wrap">
+<section id="home">
+  <div class="hero-img"><img data-ph="hero" alt="OroNoche · Casino online peruano"><button class="hot" style="left:39.3%;top:79.8%;width:21.4%;height:12.4%" onclick="heroGo()" aria-label="Regístrate ahora"></button></div>
+  <div class="trust">
+    <div class="trust-i"><span class="ti-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span></span><div><b>Cuenta protegida</b><small>Verifica tu identidad desde tu perfil</small></div></div>
+    <div class="trust-i"><span class="ti-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span></span><div><b>Pagos locales</b><small>Yape, Plin y bancos peruanos</small></div></div>
+    <div class="trust-i"><span class="ti-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></span></span><div><b>Bono de bienvenida</b><small>S/ 100.00 al crear tu cuenta</small></div></div>
+    <div class="trust-i"><span class="ti-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span></span><div><b>Juega desde el móvil</b><small>Diseño adaptado a tu pantalla</small></div></div>
+  </div>
+  <div id="homeProducts"></div>
+  <div class="sec-head" id="h-extra"><span class="sh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4"/><path d="M7 4h10v6a5 5 0 0 1-10 0V4z"/><path d="M17 6h3v2a3 3 0 0 1-3 3M7 6H4v2a3 3 0 0 0 3 3"/></svg></span><div class="sh-txt"><h2>Deportes y bonos</h2><p>Más formas de jugar con OroNoche.</p></div></div>
+  <div class="tiles"><div class="trow r2"><a class="tile" style="flex:515" onclick="goGames()"><img data-ph="sport" alt="Apuestas deportivas"></a><a class="tile" style="flex:407" onclick="heroGo()"><img data-ph="bonos" alt="Bonos y promociones"></a><a class="tile" style="flex:274" onclick="goGames()"><img data-ph="movil" alt="Juega en cualquier momento"></a><a class="tile" style="flex:300" onclick="openWallet('deposit')"><img data-ph="pagos" alt="Métodos de pago"></a></div></div>
+  <div class="sec-head" id="h-pasos"><span class="sh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><div class="sh-txt"><h2>Empieza en tres pasos</h2><p>Del registro a tu primera partida en minutos.</p></div></div>
+  <div class="steps">
+    <div class="step"><span class="step-n">1</span><span class="ti-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 20c1-4 3.5-6 7-6s6 2 7 6"/><path d="M19 8v6M16 11h6"/></svg></span></span><h3>Crea tu cuenta</h3><p>Regístrate con tu correo o teléfono y recibe tu bono de bienvenida.</p></div>
+    <div class="step"><span class="step-n">2</span><span class="ti-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7.5 10.5L12 15l4.5-4.5"/><path d="M5 19.5h14"/></svg></span></span><h3>Recarga tu saldo</h3><p>Elige Yape, Plin o tu banco y deposita en soles peruanos.</p></div>
+    <div class="step"><span class="step-n">3</span><span class="ti-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4"/><path d="M7 4h10v6a5 5 0 0 1-10 0V4z"/><path d="M17 6h3v2a3 3 0 0 1-3 3M7 6H4v2a3 3 0 0 0 3 3"/></svg></span></span><h3>Juega y retira</h3><p>Disfruta de los juegos y solicita tus retiros desde la billetera.</p></div>
+  </div>
+  <div class="steps-cta"><button class="btn gold lg" type="button" onclick="heroGo()"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 20c1-4 3.5-6 7-6s6 2 7 6"/><path d="M19 8v6M16 11h6"/></svg></span><span>Crear mi cuenta</span></button></div>
+  <section class="paysec" id="h-pagos"><div class="sec-head"><span class="sh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20M6 15h4"/></svg></span><div class="sh-txt"><h2>Métodos de pago en Perú</h2><p>Deposita y retira con Yape, Plin, BCP, Interbank, Scotiabank, BIM, Panda y Ligo.</p></div></div><div class="pay-cats" id="payCats"></div><div class="pay-grid" id="payGrid"></div></section>
+</section>
+
+<section id="auth" class="hidden auth-shell">
+  <div class="panel">
+    <img data-logo class="alogo" alt="OroNoche"><div class="eyebrow">Tu cuenta</div>
+    <h1 id="authTitle">Crear cuenta</h1>
+    <p class="muted" id="authSubtitle" style="margin-bottom:8px">Crea tu cuenta para acceder a la sala.</p>
+    <div class="auth-perk" id="authPerk"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></span><div><b>Bono de bienvenida</b>Recibe S/ 100.00 al crear tu cuenta.</div></div>
+    <form id="authForm">
+      <div id="nameField" class="field"><label for="fullName">Nombre completo</label><div class="inp"><span class="inp-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span></span><input id="fullName" autocomplete="name" placeholder="Tu nombre"></div></div>
+      <div class="field"><label for="identifier">Número de teléfono</label><div class="inp"><span class="inp-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span></span><span class="inp-pre" aria-hidden="true">+51</span><input id="identifier" class="has-pre" required autocomplete="tel-national" placeholder="9XX XXX XXX"></div></div>
+      <div class="field"><label for="password">Contraseña</label><div class="inp has-eye"><span class="inp-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></span><input id="password" required type="password" autocomplete="current-password" placeholder="Tu contraseña"><button class="inp-eye" type="button" id="pwEye" aria-label="Mostrar contraseña" onclick="togglePw()"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span></button></div></div>
+      <button class="btn gold full lg" id="authSubmit" type="submit">Crear cuenta</button>
+    </form>
+    <p class="muted" style="font-size:11.5px;margin-top:16px">Al continuar confirmas que tienes 18 años o más.</p>
+    <div style="text-align:center;margin-top:8px"><button class="switch" id="authSwitch" onclick="toggleAuthMode()">¿Ya tienes cuenta? Inicia sesión</button></div>
+    <div style="text-align:center"><button class="switch" type="button" onclick="showOnly('home')"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></span>Volver al inicio</button></div>
+  </div>
+</section>
+
+<section id="casino" class="hidden">
+  <div class="dash-head">
+    <div>
+      <div class="eyebrow">Sala principal</div>
+      <h1 style="margin:6px 0">Bienvenido, <span id="casinoName">Jugador</span></h1>
+      <p class="muted">Elige un juego para comenzar.</p>
+    </div>
+    
+  </div>
+  <div class="bonus-banner">
+    <div>
+      <div class="eyebrow">Bono de bienvenida</div>
+      <strong style="font-size:18px">Crédito de bienvenida acreditado</strong>
+    </div>
+    <div class="bonus-value">+ S/ 100.00</div>
+  </div>
+  <div id="lvlNote" class="lvl-note"></div>
+  <div id="casinoGames"></div>
+  <div id="gameArea" class="hidden" style="margin-top:24px"></div>
+</section>
+
+<section id="profile" class="hidden">
+  <div class="dash-head">
+    <div>
+      <div class="eyebrow">Centro de cuenta</div>
+      <h1 style="margin:6px 0">Mi perfil</h1>
+      <p class="muted">Gestiona tus datos y preferencias.</p>
+    </div>
+    <div class="balance-chip"><span class="bc-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg></span></span><span class="bc-txt"><small>Saldo</small><b id="profileBalance">S/ 100.00</b></span></div>
+  </div>
+  <div class="dash-grid">
+    <nav class="panel side-nav">
+      <div class="nav-label">Mi cuenta</div>
+      <button class="active" data-tab="overview" onclick="profileTab('overview')"><span class="nav-ico" data-i="grid"></span>Resumen</button>
+      <button data-tab="wallet" onclick="profileTab('wallet')"><span class="nav-ico" data-i="wallet"></span>Billetera</button>
+      <button data-tab="personal" onclick="profileTab('personal')"><span class="nav-ico" data-i="user"></span>Datos personales</button>
+      <button data-tab="verification" onclick="profileTab('verification')"><span class="nav-ico" data-i="id"></span>Verificación</button>
+      <button data-tab="security" onclick="profileTab('security')"><span class="nav-ico" data-i="lock"></span>Seguridad</button>
+      <button data-tab="preferences" onclick="profileTab('preferences')"><span class="nav-ico" data-i="gear"></span>Preferencias</button>
+      <button data-tab="history" onclick="profileTab('history')"><span class="nav-ico" data-i="clock"></span>Actividad</button>
+      <div class="nav-label">Sala</div>
+      <button onclick="showCasino()"><span class="nav-ico" data-i="spade"></span>Volver al casino</button>
+    </nav>
+    <div id="profileContent"></div>
+  </div>
+</section>
+
+<section id="admin" class="hidden">
+  <div class="dash-head">
+    <div>
+      <div class="eyebrow">Consola interna</div>
+      <h1 style="margin:6px 0">Administración</h1>
+      <p class="muted">Usuarios, saldos y verificación.</p>
+    </div>
+    <button class="btn" type="button" onclick="logout()"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg></span><span>Cerrar sesión</span></button>
+  </div>
+  <div class="stats">
+    <div class="stat"><small>Usuarios registrados</small><strong id="adminCount">0</strong></div>
+    <div class="stat"><small>Total de saldos</small><strong id="adminTotal">S/ 0.00</strong></div>
+    <div class="stat"><small>Backend</small><strong style="font-size:15px">Supabase</strong></div>
+  </div>
+  <div class="panel" style="margin-top:18px"><h2 style="font-size:20px;margin-bottom:12px">Solicitudes de pago</h2><div class="table-wrap" id="adminTx"></div></div>
+  <div class="panel" style="margin-top:18px">
+    <div class="adm-head"><h2 style="font-size:20px">Usuarios registrados</h2><button class="btn small" type="button" onclick="openMail(null)">Carta a todos</button></div>
+    <div class="table-wrap">
+      <table class="users-tbl">
+        <thead><tr><th>Usuario</th><th>Teléfono</th><th>Estado</th><th>Fecha</th><th>Saldo</th><th>DNI</th><th>Nivel</th><th>Acción</th></tr></thead>
+        <tbody id="usersTable"></tbody>
+      </table>
+    </div>
+    <div id="emptyUsers" class="empty hidden">No hay usuarios en este navegador.</div>
+  </div>
+</section>
+</main>
+
+<footer class="foot"><div class="foot-in">
+  <img data-logo class="flogo" alt="OroNoche">
+  <div class="pay-mini" id="payMini"></div>
+  <div class="foot-bottom"><b class="age18">+18</b><p>Solo para mayores de 18 años. Juega con responsabilidad.</p></div>
+  <span class="cp">© <span id="yr">2026</span> OroNoche</span>
+</div></footer>
+<div id="walletModal" class="wm hidden" onclick="if(event.target===this)closeWallet()"><div class="wm-box" role="dialog" aria-modal="true" aria-labelledby="wmTitle">
+<div class="wm-head"><div class="wm-hd-l"><span class="wm-hd-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg></span></span><div><h2 id="wmTitle">Billetera</h2><p>Operaciones en soles peruanos (PEN)</p></div></div><button class="wm-x" type="button" aria-label="Cerrar" onclick="closeWallet()"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></span></button></div>
+<div class="wm-tabs" role="tablist">
+<button id="wmD" type="button" role="tab" class="wm-tab wm-tab-dep" onclick="wmMode('deposit')"><span class="wm-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7.5 10.5L12 15l4.5-4.5"/><path d="M5 19.5h14"/></svg></span><span class="wm-tab-txt">Depositar</span></button>
+<button id="wmW" type="button" role="tab" class="wm-tab wm-tab-wd" onclick="wmMode('withdraw')"><span class="wm-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V4"/><path d="M7.5 8.5L12 4l4.5 4.5"/><path d="M5 19.5h14"/></svg></span><span class="wm-tab-txt">Retirar</span></button>
+</div>
+<div class="wm-bal"><span>Saldo disponible</span><b id="wmBal"></b></div>
+<div class="wm-sec-title">Método de pago</div><div id="walletExtraActions" class="wallet-extra-actions"><button class="btn gold" type="button" onclick="openDepositInstructions()">Ver instrucciones y QR de depósito</button><a class="btn help-manager" href="https://m.me/61595039021306" target="_blank" rel="noopener"><span class="messenger-mark" aria-hidden="true">➤</span> Ayuda con el depósito</a></div>
+<div class="pay-cats" id="wmCats"></div><div class="pay-grid sel" id="wmGrid"></div><div class="wm-form" id="wmForm"></div></div></div>
+
+<div id="depositInstructionsModal" class="deposit-instructions hidden" role="dialog" aria-modal="true" aria-labelledby="diTitle" onclick="if(event.target===this)closeDepositInstructions()"><div class="di-box"><button class="btn wm-x di-close" type="button" onclick="closeDepositInstructions()" aria-label="Cerrar">×</button><h2 id="diTitle">Instrucciones de pago paso a paso</h2><div class="di-images"><img src="./assets/images/asset-e348a7f9a104.jpg" alt="Instrucciones para pagar con Yape o Plin"><div><h3 style="color:#f8d77a;text-align:center">Escanea o descarga el QR</h3><img class="di-qr" src="./assets/images/asset-48df8dc39e79.jpg" alt="Código QR para realizar el pago"><p style="color:#eee;text-align:center">Después de pagar, guarda el comprobante y envíalo al gerente para confirmar el depósito.</p></div></div><div class="di-help"><a class="btn gold" href="https://m.me/61595039021306" target="_blank" rel="noopener">Ayuda con el depósito · Manuel</a></div></div></div>
+<div id="lvlModal" class="wm hidden" onclick="if(event.target===this)closeLvl()"><div class="wm-box lvl-box" role="dialog" aria-modal="true" aria-labelledby="lvlTitle"><div class="lk"></div><h2 id="lvlTitle">Nivel 2 requerido</h2><p id="lvlText"></p><button class="btn gold" type="button" onclick="lvlPlay()">Jugar Sol Dorado</button><button class="btn" type="button" onclick="closeLvl()">Entendido</button></div></div>
+
+<div id="letterOv" class="lt hidden" role="dialog" aria-modal="true" aria-labelledby="ltSub"><div class="lt-paper">
+  <div class="lt-in"><div class="lt-brand"><img id="ltLogo" class="lt-logo" alt="OroNoche"></div><div class="lt-meta"><span id="ltTo"></span><span id="ltDate"></span></div><h2 class="lt-sub" id="ltSub"></h2><div class="lt-body" id="ltBody"></div><div class="lt-sign">Equipo OroNoche</div></div>
+  <div class="lt-foot"><button class="btn gold" type="button" id="ltClose" onclick="closeLetter()">Entendido</button></div></div></div>
+<div id="inboxModal" class="wm hidden" onclick="if(event.target===this)closeInbox()"><div class="wm-box ib-box" role="dialog" aria-modal="true" aria-labelledby="ibTitle">
+  <div class="wm-head"><div class="wm-hd-l"><span class="wm-hd-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7.5L12 13.5l8.5-6"/></svg></span></span><div><h2 id="ibTitle">Cartas</h2><p id="ibSub"></p></div></div><button class="wm-x" type="button" aria-label="Cerrar" onclick="closeInbox()"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></span></button></div>
+  <div class="ib-tools"><button class="btn small hidden" type="button" id="ibReadAll" onclick="mailReadAll()">Marcar todo como leído</button></div>
+  <div class="ib-list" id="ibList"></div></div></div>
+<div id="balModal" class="wm hidden" onclick="if(event.target===this)closeBal()"><div class="wm-box am-box" role="dialog" aria-modal="true" aria-labelledby="balTitle">
+  <div class="wm-head"><div class="wm-hd-l"><span class="wm-hd-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg></span></span><div><h2 id="balTitle">Gestionar saldo</h2><p id="balWho"></p></div></div><button class="wm-x" type="button" aria-label="Cerrar" onclick="closeBal()"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></span></button></div>
+  <div class="wm-bal"><span>Saldo actual</span><b id="balCur"></b></div>
+  <div class="seg" id="balSeg"><button type="button" data-m="add" onclick="balMode('add')">Sumar</button><button type="button" data-m="sub" onclick="balMode('sub')">Restar</button><button type="button" data-m="set" onclick="balMode('set')">Fijar</button></div>
+  <div class="wm-form">
+    <div><label for="balAmt">Importe</label><div class="amt"><span>S/</span><input id="balAmt" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0.00" oninput="balPrev()"></div></div>
+    <div class="wm-chips" id="balChips"><button type="button" onclick="balChip(10)">+10</button><button type="button" onclick="balChip(50)">+50</button><button type="button" onclick="balChip(100)">+100</button><button type="button" onclick="balChip(500)">+500</button><button type="button" onclick="balChip(1000)">+1000</button></div>
+    <div class="bal-prev"><span>Nuevo saldo</span><div><b id="balNew"></b><small id="balDelta"></small></div></div>
+    <label class="chk"><input type="checkbox" id="balNotify" onchange="$('balNoteWrap').classList.toggle('hidden',!this.checked)"><span>Avisar al jugador con una carta</span></label>
+    <div id="balNoteWrap" class="hidden"><label for="balNote">Nota para la carta (opcional)</label><input id="balNote" type="text" maxlength="140" placeholder="Ej.: Bono por recarga"></div>
+    <div class="am-actions"><button class="btn" type="button" onclick="closeBal()">Cancelar</button><button class="btn gold" type="button" id="balOk" onclick="balApply()">Aplicar</button></div>
+  </div></div></div>
+<div id="mailModal" class="wm hidden" onclick="if(event.target===this)closeMail()"><div class="wm-box am-box" role="dialog" aria-modal="true" aria-labelledby="mailTitle">
+  <div class="wm-head"><div class="wm-hd-l"><span class="wm-hd-ico"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7.5L12 13.5l8.5-6"/></svg></span></span><div><h2 id="mailTitle">Nueva carta</h2><p id="mailWho"></p></div></div><button class="wm-x" type="button" aria-label="Cerrar" onclick="closeMail()"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></span></button></div>
+  <div class="wm-form">
+    <label class="chk"><input type="checkbox" id="mailAll" onchange="mailWho()"><span id="mailAllTxt">Enviar a todos los usuarios</span></label>
+    <div><div class="wm-sec-title">Plantillas</div><div class="wm-chips"><button type="button" onclick="mailTpl('bono')">Bono</button><button type="button" onclick="mailTpl('verif')">Verificación</button><button type="button" onclick="mailTpl('pago')">Pago</button><button type="button" onclick="mailTpl('aviso')">Aviso</button></div></div>
+    <div><label for="mailSub">Asunto</label><input id="mailSub" type="text" maxlength="80" placeholder="Asunto de la carta"></div>
+    <div><label for="mailBody">Mensaje</label><textarea id="mailBody" maxlength="1500" placeholder="Escribe el mensaje…"></textarea></div>
+    <label class="chk"><input type="checkbox" id="mailPop" checked><span>Mostrar a pantalla completa al jugador</span></label>
+    <div class="am-actions"><button class="btn" type="button" onclick="mailPreview()">Vista previa</button><button class="btn gold" type="button" onclick="mailSubmit()">Enviar carta</button></div>
+  </div></div></div>
+<div id="toast" class="toast hidden"></div>
+<div id="rewardOverlay" class="rw hidden" data-tier="normal" onclick="if(event.target===this)closeReward()">
+  <div class="rw-rays"></div>
+  <canvas id="rwCanvas"></canvas>
+  <div class="rw-card" role="dialog" aria-modal="true">
+    <div class="rw-eyebrow" id="rewardEyebrow">¡Felicidades!</div>
+    <div class="rw-chest"><img id="rewardChest" alt="" draggable="false" src="./assets/images/asset-d28e52e7eacf.webp"></div>
+    <div class="rw-ribbon"><h2 id="rewardTitle">¡Has ganado!</h2></div>
+    <div class="rw-amount" id="rewardAmount">S/ 0.00</div>
+    <p class="rw-sub" id="rewardSub">El premio se ha añadido a tu saldo.</p>
+    <button class="btn gold" type="button" onclick="closeReward()">Recoger</button>
+  </div>
+</div>
+
+<script defer src="./js/script-01.js"></script>
+
+<script defer src="./js/script-02.js"></script>
+<script defer src="./js/script-03.js"></script>
+<script defer src="./js/script-04.js"></script>
+<script defer src="./js/script-05.js"></script>
+
+<script defer src="./js/script-06.js"></script>
+<script src="./supabase-config.js"></script>
+<script src="./supabase-bridge.js"></script>
+
+
+
+</body>
+</html>
